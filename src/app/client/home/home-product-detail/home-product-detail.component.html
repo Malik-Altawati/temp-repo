@@ -1,0 +1,14 @@
+<div class="text-align-center">
+  <div class="card">
+    <h3 class="m-3">Details of Product</h3>
+    <img class="card-img-top" [src]="this.msg.image " alt="Card image cap" />
+    <div class="card-body" *ngIf="this.msg.nom">
+      <h5 class="card-title">{{this.msg.nom}}</h5>
+      <p class="card-text">
+        Price: {{this.msg.prix}}
+      </p>
+      <p>Description: {{this.msg.description}}</p>
+      <p>Catagory: {{this.msg.id}}</p>
+    </div>
+  </div>
+</div>

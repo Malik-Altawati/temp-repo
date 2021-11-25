@@ -1,0 +1,25 @@
+<div class="row">
+  <div class="col-9">
+    <div class="row">
+      <div class="card col-3 p-5 text-center" *ngFor="let prod of produits">
+        <img class="card-img-top" [src]="prod.image" alt="Card image cap" />
+        <div class="card-body">
+          <h5 class="card-title">{{prod.nom}}</h5>
+          <p class="card-text">
+            prix: {{prod.prix}}
+          </p>
+          <a class="btn btn-secondary text-center" (click)="select(prod)"
+            >View Details</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-3">
+    <div class="row">
+      <div class="card col-12">
+        <app-home-product-detail [msg]="selected"></app-home-product-detail>
+      </div>
+    </div>
+  </div>
+</div>
