@@ -5,20 +5,19 @@ import { AdminRoutingModule } from './admin-routing.module';
 import { HomeadmModule } from './homeadm/homeadm.module';
 import { GestprodModule } from './gestprod/gestprod.module';
 import { AdminComponent } from './admin.component';
-
+import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [
-    AdminComponent
-  ],
+  declarations: [AdminComponent],
   imports: [
     CommonModule,
     AdminRoutingModule,
     HomeadmModule,
-    GestprodModule
+    GestprodModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
-  exports: [
-    AdminComponent
-  ]
+  exports: [AdminComponent],
 })
-export class AdminModule { }
+export class AdminModule {}
